@@ -13,6 +13,19 @@ module.exports = {
 
 const express = require("express");
 const app = express();
+
+
+app.all("/",(req,res,next)=>{
+   // res.json({
+   //          hello:"world"
+   //      })
+
+   req.test_field = "Test Field";
+   next();
+})
+
+
+
 app.get("/",(req,res,next)=>{
     res.status(200);
     res.setHeader("Content-type","text/html")
