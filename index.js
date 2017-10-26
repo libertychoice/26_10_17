@@ -31,7 +31,7 @@ app.get("/",(req,res,next)=>{
     res.setHeader("Content-type","text/html")
     //res.setHeader("Content-type","plain/text") //try to save text
     res.send(
-        `<h1>TEEEST</h1>`
+        `<h1>TEEEST ${req.test_field}</h1>`
     )
    // res.json({
    //     hello:"world"
